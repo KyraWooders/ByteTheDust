@@ -9,7 +9,7 @@ public class PlayerMovementBehavior : MonoBehaviour
     [SerializeField]
     private CharacterController controller;
 
-    private float speed = 5.0f;
+    private float speed = Player.GetPlayerSpeed();
 
     // Update is called once per frame
     void Update()

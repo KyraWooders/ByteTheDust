@@ -1,0 +1,60 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player : MonoBehaviour
+{
+    //Default player stats
+    static float playerMaxHealth = 100.0f;
+    static float playerCurrentHealth = 100.0f;
+    static float playerDamage = 10.0f;
+    static float playerSpeed = 3.0f;
+
+    //Get the player's max health
+    static public float GetPlayerMaxHealth()
+    {
+        return playerMaxHealth;
+    }
+
+    //Set the player's max health
+    static public void SetPlayerMaxHealth(float newMaxHealth)
+    {
+        playerMaxHealth = newMaxHealth;
+    }
+
+    //Get the player's current health
+    static public float GetPlayerCurrentHealth()
+    {
+        return playerCurrentHealth;
+    }
+
+    //Set the player's current health
+    static public void SetPlayerCurrentHealth(float newCurrentHealth)
+    {
+        playerCurrentHealth = newCurrentHealth;
+    }
+
+    //Get the player's damage
+    static public float GetPlayerDamage()
+    {
+        return playerDamage;
+    }
+
+    //Set the player's damage
+    static public void SetPlayerDamaage(float newDamage)
+    {
+        playerDamage = newDamage;
+    }
+
+    //Get the player's speed
+    static public float GetPlayerSpeed()
+    {
+        return playerSpeed;
+    }
+
+    //Set the player's speed
+    static public void SetPlayerSpeed(float newSpeed)
+    {
+        playerSpeed = newSpeed;
+    }
+}
