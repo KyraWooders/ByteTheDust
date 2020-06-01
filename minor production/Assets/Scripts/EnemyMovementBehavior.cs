@@ -9,13 +9,7 @@ public class EnemyMovementBehavior : MonoBehaviour
     private CharacterController controller;
 
     public Transform target;
-    public float speed = 1.0f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public float speed = Enemy.GetEnemySpeed();
 
     // Update is called once per frame
     void Update()
