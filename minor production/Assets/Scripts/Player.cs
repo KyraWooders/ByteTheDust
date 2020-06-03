@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     static float playerCurrentHealth = 100.0f;
     static float playerDamage = 10.0f;
     static float playerSpeed = 3.0f;
+    static float playerAttackRate = 2.0f;
 
     //Get the player's max health
     static public float GetPlayerMaxHealth()
@@ -56,5 +57,17 @@ public class Player : MonoBehaviour
     static public void SetPlayerSpeed(float newSpeed)
     {
         playerSpeed = newSpeed;
+    }
+
+    //Get the player's attack rate
+    static public float GetPlayerAttackRate()
+    {
+        return playerAttackRate;
+    }
+
+    //Set the player's attack rate
+    static public void SetPlayerAttackRate(float newAttackRate)
+    {
+        playerAttackRate = newAttackRate;
     }
 }

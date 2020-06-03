@@ -306,7 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1139248260}
   m_Layer: 9
-  m_Name: AttackPoint
+  m_Name: PlayerAttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,12 +352,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1336978117}
   attackPoint: {fileID: 1139248260}
-  attackRange: 0.6
+  attackRange: 0.5
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
-  attack: 5
-  attackRate: 2
 --- !u!4 &1520908014 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1932561757168239469, guid: a2993885b49adea419b99a30e6beb060,
@@ -422,14 +420,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAttackPoint: {fileID: 1586990397}
-  attackRange: 0.57
+  attackRange: 0.7
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
-  attack: 10
-  maxHealth: 20
-  currentHealth: 0
-  attackRate: 2
 --- !u!1 &1586990396
 GameObject:
   m_ObjectHideFlags: 0

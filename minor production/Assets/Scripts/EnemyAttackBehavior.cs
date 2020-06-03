@@ -10,11 +10,11 @@ public class EnemyAttackBehavior : MonoBehaviour
     public LayerMask playerLayer;
 
 
-    public float attack = 1.0f;
-    public float maxHealth = 20.0f;
-    public float currentHealth;
+    private float attack = Enemy.GetEnemyDamage();
+    private float maxHealth = Enemy.GetEnemyMaxHealth();
+    private float currentHealth = Enemy.GetEnemyCurrentHealth();
 
-    public float attackRate = 2f;
+    private float attackRate = Enemy.GetEnemyAttackRate();
     float nextAttackTime = 0f;
 
 
@@ -30,12 +30,11 @@ public class EnemyAttackBehavior : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            //if (GetComponent<PlayerMovementBehavior>().)
-            //{
-            //    //NOTICE: ATTACK DOES DOUBLE DAMAGE! NEEDS TO BE FIXED
-            //    Attack();
-            //    nextAttackTime = Time.time + 1f / attackRate;
-            //}
+           
+            //NOTICE: ATTACK DOES DOUBLE DAMAGE! NEEDS TO BE FIXED
+            Attack();
+            nextAttackTime = Time.time + 1f / attackRate;
+           
         }
     }
 
@@ -61,14 +60,15 @@ public class EnemyAttackBehavior : MonoBehaviour
 
     void Attack()
     {
-        //Detect enemies in range of attack
+        //Detect player in range
         Collider[] hitPlayer = Physics.OverlapSphere(enemyAttackPoint.position, attackRange, playerLayer);
 
-        //Damage enemies
+        //Damage player
         foreach (Collider player in hitPlayer)
         {
+           
+            player.GetComponent<PlayerAttackBehavior>().TakeDamage(attack);
             Debug.Log("Attacked player");
-            player.GetComponent<EnemyAttackBehavior>().TakeDamage(attack);
         }
 
     }
@@ -80,5 +80,5 @@ public class EnemyAttackBehavior : MonoBehaviour
         Gizmos.DrawWireSphere(enemyAttackPoint.position, attackRange);
     }
 
-    
+
 }
