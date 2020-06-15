@@ -10,11 +10,11 @@ public class EnemyAttackBehavior : MonoBehaviour
     public LayerMask playerLayer;
 
 
-    private float attack = Enemy.GetEnemyDamage();
-    private float maxHealth = Enemy.GetEnemyMaxHealth();
-    private float currentHealth = Enemy.GetEnemyCurrentHealth();
+    private float attack = EnemyBaseBehavior.GetEnemyDamage();
+    private float maxHealth = EnemyBaseBehavior.GetEnemyMaxHealth();
+    private float currentHealth = EnemyBaseBehavior.GetEnemyCurrentHealth();
 
-    private float attackRate = Enemy.GetEnemyAttackRate();
+    private float attackRate = EnemyBaseBehavior.GetEnemyAttackRate();
     float nextAttackTime = 0f;
 
 

@@ -11,12 +11,12 @@ public class PlayerAttackBehavior : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayer;
 
-    private float maxHealth = Player.GetPlayerMaxHealth();
-    private float currentHealth = Player.GetPlayerCurrentHealth();
+    private float maxHealth = PlayerBaseBehavior.GetPlayerMaxHealth();
+    private float currentHealth = PlayerBaseBehavior.GetPlayerCurrentHealth();
 
 
-    private float attack = Player.GetPlayerDamage();
-    private float attackRate = Player.GetPlayerAttackRate();
+    private float attack = PlayerBaseBehavior.GetPlayerDamage();
+    private float attackRate = PlayerBaseBehavior.GetPlayerAttackRate();
     float nextAttackTime = 0f;
 
     // Update is called once per frame
